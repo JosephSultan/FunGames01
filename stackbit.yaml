@@ -1,0 +1,23 @@
+stackbitVersion: ~0.5.0
+ssgName: nextjs
+nodeVersion: '14'
+cmsName: git
+dataDir: content/data
+pagesDir: content/pages
+pageLayoutKey: type
+assets:
+  referenceType: static
+  staticDir: public
+  uploadDir: images
+  publicPath: /
+contentModels:
+  PageLayout:
+    isPage: true
+    urlPath: '/{slug}'
+    newFilePath: '{slug}.md'
+  PostLayout:
+    isPage: true
+    urlPath: '/blog/{slug}'
+    newFilePath: 'posts/{slug}.md'
+  Person:
+    newFilePath: 'team/{slug}.json'
